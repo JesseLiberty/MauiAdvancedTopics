@@ -55,7 +55,6 @@
             TextColor="Red" />
         <Button
             Margin="0,30,0,0"
-            BackgroundColor="LightGray"
             Command="{Binding SignUpCommand}"
             CornerRadius="5"
             HorizontalOptions="Center"

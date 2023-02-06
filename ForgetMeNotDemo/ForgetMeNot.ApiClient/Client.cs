@@ -23,11 +23,11 @@ namespace ForgetMeNot.ApiClient
     //   finishing the name with Response or Request, for example, UserUpdateRequest, UserCreateRequest
     public class Client
     {
-        RestClient client;
+        private RestClient client;
 
-        string baseUrl;
-        string username;
-        string password;
+        private string baseUrl;
+        private string username;
+        private string password;
 
         public Client(string baseUrl)
         {

@@ -33,7 +33,7 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="LightGreen" />
+                                    <Setter Property="BackgroundColor" Value="LightBlue" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Focused">
@@ -58,7 +58,7 @@
             <Style
                 TargetType="Entry"
                 x:Key="ValidUserName">
-                <Setter Property="BackgroundColor" Value="LightGreen" />
+                <Setter Property="BackgroundColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -106,13 +106,7 @@
                 Grid.Column="0"
                 Grid.Row="2"
                 Style="{StaticResource LoginButton}"
-                Text="Submit" />
-            <Button
-                Command="{Binding DoCreateAccountCommand}"
-                Grid.Column="1"
-                Grid.Row="2"
-                Style="{StaticResource LoginButton}"
-                Text="Create Account">
+                Text="Submit">
                 <Button.Triggers>
                     <DataTrigger
                         Binding="{Binding Source={x:Reference passwordEntry}, Path=Text.Length}"
@@ -122,6 +116,13 @@
                     </DataTrigger>
                 </Button.Triggers>
             </Button>
+            <Button
+                Command="{Binding DoCreateAccountCommand}"
+                Grid.Column="1"
+                Grid.Row="2"
+                Style="{StaticResource LoginButton}"
+                Text="Create Account"/>
+
             <Button
                 BackgroundColor="LightGray"
                 Command="{Binding ForgotPasswordCommand}"
